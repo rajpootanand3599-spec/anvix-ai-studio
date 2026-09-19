@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anvix AI Studio</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: white;
+}
+
+.header {
+  padding: 25px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #151b3d, #252b67);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.tagline {
+  color: #b9c2ff;
+  margin-top: 8px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background: #151b2f;
+  border: 1px solid #303858;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: bold;
+}
+
+.upload {
+  border: 2px dashed #5967a8;
+  padding: 25px;
+  text-align: center;
+  border-radius: 14px;
+}
+
+input[type="file"],
+textarea {
+  width: 100%;
+}
+
+textarea {
+  min-height: 120px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #414a70;
+  background: #0d1325;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #6c5ce7, #00b894);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.status {
+  text-align: center;
+  color: #9da9d9;
+  margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="logo">✨ Anvix AI Studio</div>
+  <div class="tagline">Create. Animate. Imagine.</div>
+</div>
+
+<div class="container">
+
+  <div class="card">
+
+    <h2>🎬 AI Video Creator</h2>
+
+    <label>🖼️ Character Image</label>
+
+    <div class="upload">
+      <input type="file" accept="image/*">
+    </div>
+
+    <label>📝 Scene Prompt</label>
+
+    <textarea placeholder="Example:
+Gappu walks through the forest with his friends..."></textarea>
+
+    <label>🗣️ Character Dialogue</label>
+
+    <textarea placeholder="Example:
+चलो दोस्तों, हमें खजाना जरूर मिलेगा!"></textarea>
+
+    <button onclick="generateVideo()">
+      🎥 Generate Video
+    </button>
+
+    <div class="status" id="status">
+      Ready to create your scene 🚀
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function generateVideo() {
+  document.getElementById("status").innerText =
+    "🚀 AI video generation will be connected here...";
+}
+</script>
+
+</body>
+</html>
